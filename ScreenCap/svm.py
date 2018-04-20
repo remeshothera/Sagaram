@@ -1,8 +1,13 @@
+###############################################################
+#    Author : Remeshkumar K K
+#    Date : 04/19/2018
+#    Code snippet for ML training and prediction
+###############################################################
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import svm
 import logging
-logging.basicConfig(filename="sample.log", level=logging.INFO)
+logging.basicConfig(filename="results.log", level=logging.INFO)
 model = None
 
 # print model.score(X_test,y_test)

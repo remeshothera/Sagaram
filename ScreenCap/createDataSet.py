@@ -1,9 +1,15 @@
+###############################################################
+#    Author : Remeshkumar K K
+#    Date : 04/19/2018
+#    Code snippet to create pixel dataset from set of images.
+###############################################################
+
 import os
 from PIL import Image
 import numpy
 #directory = "train20X20"
 directory = "train25X25"
-directory = "predict"
+directory = "predict"  # keep your images folder name here
 image_extension = ".png"
 datasetFilename = directory+".csv"
 import pandas
@@ -71,6 +77,7 @@ def createDataSet():
                 #print "========================================================================="
     csvfile.close()
 
-#changeTrainImagesPixel()
-createDataSet()
+if __name__ == "__main__" :
+    #changeTrainImagesPixel()  # to rescale images
+    createDataSet() # to create pixel dataset .csv file from images
 

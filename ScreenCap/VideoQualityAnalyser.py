@@ -1,3 +1,9 @@
+###############################################################
+#    Author : Remeshkumar K K
+#    Date : 04/19/2018
+#    Main code which will start video and call other modules for ml , dataset creation.
+###############################################################
+
 import os
 import pyautogui
 import time
@@ -30,10 +36,10 @@ def initializeMachine():
     return model
 
 if __name__ == "__main__":
-    #Initialize the model - RandomForest classifier
+    #Initialize the model - SVM classifier
     model = initializeMachine()
     #Play Video and start analysis
-    #startAnalysis()
-    #createDataSet.changeTrainImagesPixel() # downscale the captured 1080p image
+    startAnalysis()
+    createDataSet.changeTrainImagesPixel() # downscale the captured 1080p image
     createDataSet.createDataSet() # create dataset for prediction
     svm.classifyImage(model) # classify the image type : Good OR Corrupted
